@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Panier d'Achat</title>
+  <style>
+    .item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+    .heart {
+      cursor: pointer;
+      color: gray;
+      font-size: 20px;
+    }
+    .heart.liked {
+      color: red;
+    }
+    .btn {
+      cursor: pointer;
+      padding: 5px 10px;
+      font-weight: bold;
+    }
+    .remove {
+      cursor: pointer;
+      color: red;
+      font-size: 18px;
+      margin-left: 10px;
+    }
+    .price {
+      width: 60px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🛒 Mon Panier</h1>
+
+  <div class="cart">
+    <div class="item" data-price="20">
+      <span class="heart">♥</span>
+      <span>Article 1</span>
+      <button class="btn minus">-</button>
+      <span class="quantity">1</span>
+      <button class="btn plus">+</button>
+      <span class="price">20 €</span>
+      <span class="remove">🗑</span>
+    </div>
+
+    <div class="item" data-price="35">
+      <span class="heart">♥</span>
+      <span>Article 2</span>
+      <button class="btn minus">-</button>
+      <span class="quantity">1</span>
+      <button class="btn plus">+</button>
+      <span class="price">30 €</span>
+      <span class="remove">🗑</span>
+    </div>
+  </div>
+
+  <h2>Total : <span id="total">50</span> €</h2>
+
+  <script src="script.js"></script>
+</body>
+</html>
